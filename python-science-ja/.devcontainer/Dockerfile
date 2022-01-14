@@ -21,6 +21,8 @@ RUN chmod 644 /usr/share/fonts/noto/*.otf
 RUN apt-get update && apt-get install -y fontconfig
 RUN fc-cache -fv
 
+LABEL org.opencontainers.image.source https://github.com/ncukondo/dockerfiles/python-science-ja
+
 # prepare workdir
 WORKDIR /data
 RUN chmod -R 777 /data

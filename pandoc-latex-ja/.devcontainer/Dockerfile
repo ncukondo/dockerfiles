@@ -10,4 +10,6 @@ RUN tlmgr install \
     ctex \
     type1cm 
 
+LABEL org.opencontainers.image.source https://github.com/ncukondo/dockerfiles/pandoc-latex-ja
+
 WORKDIR /data
