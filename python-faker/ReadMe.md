@@ -5,14 +5,14 @@ python faker container
 ## usage
 
 ```bash
-docker run -it --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) ghrc.ic/ncukondo/python-faker [commands]
+docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) ghrc.ic/ncukondo/python-faker [commands]
 ```
 
 
 ### examples
 Run faker command directly.
 ```bash
-docker run -it --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) ghrc.ic/ncukondo/python-faker faker name
+docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) ghrc.ic/ncukondo/python-faker faker name
 ```
 
 Run python file using faker.
