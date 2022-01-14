@@ -7,4 +7,4 @@ set -Ceuo pipefail
 dir_name=$(cd $(dirname $0) && basename `pwd`)
 name=$dir_name
 
-docker run -it  --rm   --volume "$(pwd):/data" $dir_name "$@"
+docker run -it --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) $dir_name $@
