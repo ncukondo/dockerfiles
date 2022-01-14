@@ -1,0 +1,6 @@
+pylint
+pandas
+numpy
+scipy
+requests
+matplotlib
