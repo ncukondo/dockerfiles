@@ -7,3 +7,7 @@ RUN pip install --user -r requirements.txt
 FROM python:3.9-slim-buster AS runner
 COPY --from=builder /root/.local /usr/local
 RUN chmod -R 777 /usr/local
+
+# prepare workdir
+WORKDIR /data
+RUN chmod -R 777 /data
