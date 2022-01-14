@@ -12,6 +12,7 @@ RUN curl -o /tmp/NotoSansCJKjp-hinted.zip https://noto-website-2.storage.googlea
 
 FROM python:3.9-slim-buster AS runner
 COPY --from=builder-stage /root/.local /usr/local
+RUN chmod -R 777 /usr/local
 
 # copy noto fonts and clear font cache
 RUN mkdir -p /usr/share/fonts/noto
@@ -19,8 +20,6 @@ COPY --from=builder-stage /usr/share/fonts/noto/*.otf  /usr/share/fonts/noto/
 RUN chmod 644 /usr/share/fonts/noto/*.otf
 RUN apt-get update && apt-get install -y fontconfig
 RUN fc-cache -fv
-
-RUN chmod -R 777 /usr/local
 
 # prepare workdir
 WORKDIR /data
