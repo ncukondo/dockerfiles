@@ -20,3 +20,8 @@ RUN chmod 644 /usr/share/fonts/noto/*.otf
 RUN apt-get update && apt-get install -y fontconfig
 RUN fc-cache -fv
 
+RUN chmod -R 777 /usr/local
+
+# prepare workdir
+WORKDIR /data
+RUN chmod -R 777 /data
