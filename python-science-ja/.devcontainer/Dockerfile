@@ -23,6 +23,4 @@ RUN fc-cache -fv
 
 LABEL org.opencontainers.image.source https://github.com/ncukondo/dockerfiles/python-science-ja
 
-# prepare workdir
 WORKDIR /data
-RUN chmod -R 777 /data
