@@ -12,7 +12,7 @@ docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) ghcr.io/ncukond
 ### examples
 Run python file directly.
 ```bash
-docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) ghcr.io/ncukondo/python-science-ja python -m app.py
+docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) ghcr.io/ncukondo/python-science-ja python app.py
 ```
 
 Enter the shell.
