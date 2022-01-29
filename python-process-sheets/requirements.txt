@@ -1,0 +1,12 @@
+pylint
+pandas
+numpy
+scipy
+requests
+matplotlib
+jupyter
+openpyxl
+google-api-python-client 
+google-auth-httplib2 
+google-auth-oauthlib 
+gspread
