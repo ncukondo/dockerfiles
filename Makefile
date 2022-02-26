@@ -1,5 +1,13 @@
 
 
 login:
-	eval `cat .env | grep -v ^\# | sed -e 's/\s*=\s*/=/g'`
-	echo $GHCR_TOKEN | docker login ghcr.io -u $USERNAME --password-stdin
+	bash login_ghcr.sh
+
+pandoc-latex-ja: login
+	bash deploy_ghcr.sh $@
+
+python-facker: login
+	bash deploy_ghcr.sh $@
+
+python-science-ja: login
+	bash deploy_ghcr.sh $@
