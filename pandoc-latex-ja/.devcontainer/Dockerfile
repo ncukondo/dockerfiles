@@ -11,6 +11,8 @@ RUN tlmgr update --self && tlmgr install \
     multirow \
     ltablex \
     xltabular \
+    subfig \
+    float \
     type1cm 
 
 LABEL org.opencontainers.image.source https://github.com/ncukondo/dockerfiles/pandoc-latex-ja
