@@ -1,0 +1,22 @@
+{
+	"name": "${localWorkspaceFolderBasename}",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+
+	"settings": { 
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "/bin/bash"
+			}
+		},
+		"terminal.integrated.defaultProfile.linux": "bash",
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"James-Yu.latex-workshop",
+		"torn4dom4n.latex-support"
+	],
+}

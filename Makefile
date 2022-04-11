@@ -11,3 +11,6 @@ python-facker: login
 
 python-science-ja: login
 	bash deploy_ghcr.sh $@
+
+pandoc-lualatex-ja: login
+	bash deploy_ghcr.sh $@
