@@ -28,3 +28,5 @@ ENV LANG=ja_JP.UTF-8
 LABEL org.opencontainers.image.source https://github.com/ncukondo/dockerfiles/pandoc-lualatex-ja
 
 WORKDIR /data
+
+ENTRYPOINT [  ]
