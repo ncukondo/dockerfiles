@@ -17,7 +17,7 @@ docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) ghcr.io/ncukond
 
 Output Japanese pdf.
 ```bash
-docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) ghcr.io/ncukondo/pandoc-lualatex-ja pandoc -V documentclass=ltjsarticle --pdf-engine=lualatex --filter=pandoc-crossref sample.md -o sample.pdf
+docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) ghcr.io/ncukondo/pandoc-lualatex-ja pandoc -V documentclass=ltjsarticle --pdf-engine=lualatex --filter=pandoc-crossref ./sample_source/sample.md -o ./dist/sample.pdf
 ```
 
 Enter the shell.

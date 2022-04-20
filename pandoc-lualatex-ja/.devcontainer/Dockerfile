@@ -27,6 +27,11 @@ ENV LANG=ja_JP.UTF-8
 
 LABEL org.opencontainers.image.source https://github.com/ncukondo/dockerfiles/pandoc-lualatex-ja
 
+# Install BIZ UD Gothic
+RUN wget https://github.com/google/fonts/raw/main/ofl/bizudgothic/BIZUDGothic-Bold.ttf
+RUN wget https://github.com/google/fonts/raw/main/ofl/bizudgothic/BIZUDGothic-Regular.ttf
+RUN cp *.ttf /usr/share/fonts
+
 WORKDIR /data
 
 ENTRYPOINT [  ]
