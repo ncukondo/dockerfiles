@@ -32,6 +32,12 @@ RUN wget https://github.com/google/fonts/raw/main/ofl/bizudgothic/BIZUDGothic-Bo
 RUN wget https://github.com/google/fonts/raw/main/ofl/bizudgothic/BIZUDGothic-Regular.ttf
 RUN cp *.ttf /usr/share/fonts
 
+RUN mkdir -p ~/.pandoc/csl && \
+    cd ~/.pandoc/csl && \
+    wget -O vancouver.csl https://www.zotero.org/styles/vancouver && \
+    wget -O ama.csl https://www.zotero.org/styles/american-medical-association && \
+    wget -O apa.csl https://www.zotero.org/styles/apa-6th-edition
+
 WORKDIR /data
 
 ENTRYPOINT [  ]

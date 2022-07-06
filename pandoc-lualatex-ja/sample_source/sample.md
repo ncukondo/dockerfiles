@@ -18,6 +18,8 @@ tblPrefix: "表."
 lstPrefix: "コード."
 --- 
 
+\captionsetup{labelformat=empty,labelsep=none}
+
 # test
 
 test  
@@ -28,7 +30,7 @@ test
 
 [@tbl:test1]にサンプル表[^1]を示す。
 
-[@tbl:test2]にサンプル表を示す。
+[@tbl:test2]にサンプル表を示す。\hyperref[tbl:test2]{サンプル表}	
 
 
 [^1]: sample
@@ -48,10 +50,12 @@ test
 
 ## 表テスト2 latex table
 
-\begin{table}[h]
+\begin{table}[h!]
 \label{table:SpeedOfLight}
 \centering
-\caption{\label{tbl:test2}テストの表2}
+\label{tbl:test2}
+\caption{テストの表2}
+\caption*{表の解説}
   \begin{tabular}{cp{50mm}ll}
    \hline
    西暦 & \multicolumn{3}{c}{測定者}    \\ 
